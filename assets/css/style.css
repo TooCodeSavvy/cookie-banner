@@ -1,0 +1,149 @@
+/**
+ * Style definition for simple cookie consent banner
+ *
+ * 
+ * @author      Anouar
+ * @version     1.0
+ */
+div.v-cookies-consent::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/dienstenbgnew.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-color: #4397ff;
+}
+
+div.v-cookies-consent {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    padding: 2rem;
+    color: white;
+    font-size: 19px;
+}
+
+div.v-cookies-consent a {
+    color: white;
+}
+
+div.v-cookies-consent a:hover {
+    text-decoration: underline;
+}
+
+div.v-cookies-consent h2 {
+    font-size: 24px;
+    font-family: v, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: .5rem;
+    align-items: center;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.v-cookies-layout {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    grid-column-gap: 1rem;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.v-cookies-layout p
+{
+    line-height: 1.2;
+}
+
+div.v-cookies-layout > div.buttons {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-row-gap: 1rem;
+
+}
+
+div.v-cookies-layout > div.buttons a {
+    background-color: #ff501a;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px;
+    color: inherit;
+    line-height: 1;
+    transition: none;
+}
+
+div.v-cookies-layout ul.v-cookies-list
+{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 480px) {
+
+    div.v-cookies-consent {
+        padding: 1rem;
+        font-size: 16px;
+    }
+
+    div.v-cookies-layout {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content;
+        grid-row-gap: 1rem;
+
+
+    }
+
+    div.v-cookies-layout p
+    {
+        line-height: 1.2;
+    }
+
+}
+
+.cookie-reopen-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff501a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+}
+
+.cookie-reopen-button:hover {
+    background-color: #e04412;
+}

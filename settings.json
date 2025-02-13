@@ -1,0 +1,18 @@
+{
+  "gtm_id": "",
+  "cookies_to_remove": "",
+  "excluded_cookies": [
+    "v_cookies",
+    "wordpress_logged_in_",
+    "wordpress_sec_",
+    "wp-settings-",
+    "wp-settings-time-",
+    "PHPSESSID",
+    "wp_lang"
+  ],
+  "third_party_cookies_to_remove": [
+    "_ga",
+    "_ga_*",
+    "_gcl_au"
+  ]
+}
