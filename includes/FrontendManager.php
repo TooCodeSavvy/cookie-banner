@@ -46,18 +46,18 @@ class FrontendManager
     public function enqueue_assets()
     {
         $plugin_url = plugin_dir_url(dirname(__FILE__));
+        
+        // Load Tailwind from CDN
+        wp_enqueue_script('tailwind', 'https://cdn.tailwindcss.com', [], null, false);
 
         // Enqueue FontAwesome for cookie icon
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css', [], '6.7.2', 'all');
-
-        // Enqueue the CSS for the cookie banner styling.
-        wp_enqueue_style('cb-style', $plugin_url . 'assets/css/style.css', [], '1.5', 'all');
 
         // Enqueue the js-cookie library, which is used to handle cookies on the frontend.
         wp_enqueue_script('js-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js', [], '3.0.1', true);
 
         // Enqueue the main JavaScript file responsible for cookie banner behavior.
-        wp_enqueue_script_module('cb-script', $plugin_url . 'assets/js/main.js', [], '1.5', true);
+        wp_enqueue_script_module('cb-script', $plugin_url . 'assets/js/main.js', [], '1.6', true);
 
         // Localize script to pass plugin settings to JavaScript.
         wp_localize_script('cb-script', 'cookieBannerSettings', $this->settings_manager->get_settings());
