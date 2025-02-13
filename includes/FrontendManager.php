@@ -46,6 +46,9 @@ class FrontendManager
     public function enqueue_assets()
     {
         $plugin_url = plugin_dir_url(dirname(__FILE__));
+        
+        // Load Tailwind from CDN
+        wp_enqueue_script('tailwind', 'https://cdn.tailwindcss.com', [], null, false);
 
         // Enqueue FontAwesome for cookie icon
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css', [], '6.7.2', 'all');
