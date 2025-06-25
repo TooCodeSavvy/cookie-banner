@@ -65,7 +65,7 @@ The plugin supports the following languages:
 - Improved code structure for easier future updates and better separation of concerns.
 - Added new values to the settings.json file:
    - `third_party_cookies_to_remove` for handling third-party cookies.
-   - `excluded_cookies` to ensure essential cookies (e.g., vinacles_cookies) are always skipped during removal.
+   - `excluded_cookies` to ensure essential cookies (e.g., v_cookies) are always skipped during removal.
 - Introduced handling for third-party cookies not detected by the site scan button through `third_party_cookies_to_remove`.
 - Integrated Composer for using namespaces, and added checks for the existence of settings.json and autoload.php.
 - Enhanced the `scan_cookies` method to include third-party cookies and excluded cookies.
